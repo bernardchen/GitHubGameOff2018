@@ -1,56 +1,56 @@
 extends KinematicBody2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
-const JUMP_HEIGHT = -550
-const DASH_TIME = 1
+const JUMP_HEIGHT = -500
+const DASH_LEN = .15
 
-var motion = Vector2()
-var dashing = false
-var dir = 1
-var dash_acc = 0
+var velocity = Vector2()
+var dash = false
+var already_dashed = false
+var dash_cnt = 0
+var dir = 1 #right is 1, left is -1
 
-func _physics_process(delta):
-	if dashing:
-		dash_acc += delta
-		$Sprite.play("Dash")
-		motion.y = 0
-		motion.x = dir * 100 * SPEED
-		if dash_acc >= DASH_TIME:
-			dashing = false
-			motion.x = 0
-			motion.y = 0
-			dash_acc = 0
-		pass
-
-	motion.y += GRAVITY
-	if Input.is_action_pressed("ui_right"):
-		motion.x = SPEED
+func calc_movement():
+	if Input.is_action_pressed('ui_right'):
+		velocity.x = SPEED
 		$Sprite.flip_h = false
 		$Sprite.play("Run")
 		dir = 1
-	elif Input.is_action_pressed("ui_left"):
-		motion.x = -SPEED
+	elif Input.is_action_pressed('ui_left'):
+		velocity.x = -SPEED
 		$Sprite.flip_h = true
 		$Sprite.play("Run")
 		dir = -1
 	else:
-		motion.x = 0
+		velocity.x = 0
 		$Sprite.play("Idle")
-	
-	if Input.is_action_just_pressed("ui_select"):
-		dashing = true
-	
+
 	if is_on_floor():
+		already_dashed = false
 		if Input.is_action_just_pressed("ui_up"):
-			motion.y = JUMP_HEIGHT
+			velocity.y = JUMP_HEIGHT
 	else:
 		$Sprite.play("Jump")
-		
-	motion = move_and_slide(motion, UP)
+	
+	if Input.is_action_just_pressed("ui_select") and not already_dashed:
+		dash = true
+
+func _physics_process(delta):
+	velocity.y += GRAVITY
+	if dash:
+		dash_cnt += delta
+		$Sprite.play("Dash")
+		if dash_cnt < DASH_LEN:
+			velocity.y = 0
+			velocity.x = dir * 700
+		else: 
+			dash = false
+			velocity = Vector2(0, 0)
+			dash_cnt = 0
+			already_dashed = true
+	else:
+		calc_movement()
+	velocity = move_and_slide(velocity, UP)
 	pass
