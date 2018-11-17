@@ -8,9 +8,9 @@
 [ext_resource path="res://Player/Run3.png" type="Texture" id=6]
 [ext_resource path="res://Player/Run4.png" type="Texture" id=7]
 [ext_resource path="res://Player/Run7.png" type="Texture" id=8]
-[ext_resource path="res://Player/Jump1.png" type="Texture" id=9]
-[ext_resource path="res://Player/Dash.png" type="Texture" id=10]
-[ext_resource path="res://Player/wall_slide.png" type="Texture" id=11]
+[ext_resource path="res://Player/wall_slide.png" type="Texture" id=9]
+[ext_resource path="res://Player/Jump1.png" type="Texture" id=10]
+[ext_resource path="res://Player/Dash.png" type="Texture" id=11]
 [ext_resource path="res://JgDirtTileset.tres" type="TileSet" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -28,17 +28,17 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Wall",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "Dash",
+"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "Wall",
+"name": "Dash",
 "speed": 5.0
 } ]
 
