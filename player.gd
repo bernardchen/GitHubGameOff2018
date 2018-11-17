@@ -4,9 +4,12 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = -500
-const DASH_LEN = .15
+const DASH_LEN = .2
+const WALL_JUMP_LEN = .3
 
 var velocity = Vector2()
+var wall_jump
+var wall_jump_cnt = 0
 var dash = false
 var already_dashed = false
 var dash_cnt = 0
@@ -33,6 +36,19 @@ func calc_movement():
 			velocity.y = JUMP_HEIGHT
 	else:
 		$Sprite.play("Jump")
+		if is_on_wall():
+			if velocity.y > 0:
+				$Sprite.play("Wall")
+				velocity.y -= 5 * GRAVITY / 6
+			if Input.is_action_just_pressed("ui_up"):
+				$Sprite.play("Jump")
+				wall_jump = true
+				dir = dir * -1
+				velocity.y = JUMP_HEIGHT
+				if dir == 1:
+					$Sprite.flip_h = false
+				else:
+					$Sprite.flip_h = true
 	
 	if Input.is_action_just_pressed("ui_select") and not already_dashed:
 		dash = true
@@ -50,6 +66,14 @@ func _physics_process(delta):
 			velocity = Vector2(0, 0)
 			dash_cnt = 0
 			already_dashed = true
+	elif wall_jump:
+		wall_jump_cnt += delta
+		if wall_jump_cnt < WALL_JUMP_LEN:
+			velocity.x = SPEED * dir
+		else:
+			wall_jump = false
+			velocity = Vector2(0, 0)
+			wall_jump_cnt = 0
 	else:
 		calc_movement()
 	velocity = move_and_slide(velocity, UP)
