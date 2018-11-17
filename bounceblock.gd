@@ -18,7 +18,7 @@ func _ready():
 #	pass
 
 func _on_body_entered(body):
-	if (start == true):
+	if (start):
 		$"/root/World/respawnpoint/player".velocity.y = BOUNCE_HEIGHT
 	else:
 		start = true
