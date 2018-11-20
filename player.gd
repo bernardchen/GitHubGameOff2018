@@ -4,7 +4,7 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = -500
-var DASH_LEN = .15
+const DASH_LEN = .15
 
 var velocity = Vector2()
 var dash = false
