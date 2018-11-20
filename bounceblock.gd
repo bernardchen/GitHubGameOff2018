@@ -3,8 +3,8 @@ extends Area2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+var start = 0
 const BOUNCE_HEIGHT = -650
-var start = false
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -18,7 +18,8 @@ func _ready():
 #	pass
 
 func _on_body_entered(body):
-	if (start):
+	if (start == 2):
 		$"/root/World/respawnpoint/player".velocity.y = BOUNCE_HEIGHT
+		$"/root/World/respawnpoint/player".already_dashed = false
 	else:
-		start = true
+		start+=1

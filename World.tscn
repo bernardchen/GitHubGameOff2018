@@ -1,36 +1,37 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://respawnpoint.gd" type="Script" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
-[ext_resource path="res://Player/Idle0.png" type="Texture" id=3]
-[ext_resource path="res://Player/Run0.png" type="Texture" id=4]
-[ext_resource path="res://Player/Run1.png" type="Texture" id=5]
-[ext_resource path="res://Player/Run2.png" type="Texture" id=6]
-[ext_resource path="res://Player/Run3.png" type="Texture" id=7]
-[ext_resource path="res://Player/Run4.png" type="Texture" id=8]
-[ext_resource path="res://Player/Run7.png" type="Texture" id=9]
-[ext_resource path="res://Player/Dash.png" type="Texture" id=10]
+[ext_resource path="res://Player/Dash.png" type="Texture" id=3]
+[ext_resource path="res://Player/Idle0.png" type="Texture" id=4]
+[ext_resource path="res://Player/Run0.png" type="Texture" id=5]
+[ext_resource path="res://Player/Run1.png" type="Texture" id=6]
+[ext_resource path="res://Player/Run2.png" type="Texture" id=7]
+[ext_resource path="res://Player/Run3.png" type="Texture" id=8]
+[ext_resource path="res://Player/Run4.png" type="Texture" id=9]
+[ext_resource path="res://Player/Run7.png" type="Texture" id=10]
 [ext_resource path="res://Player/Jump1.png" type="Texture" id=11]
 [ext_resource path="res://bounceblock.tscn" type="PackedScene" id=12]
-[ext_resource path="res://JgDirtTileset.tres" type="TileSet" id=13]
+[ext_resource path="res://dangerblock.tscn" type="PackedScene" id=13]
+[ext_resource path="res://JgDirtTileset.tres" type="TileSet" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
+"name": "Dash",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Run",
 "speed": 10.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "Dash",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
@@ -82,11 +83,15 @@ rect = Rect2( -10, -10, 20, 20 )
 
 position = Vector2( 324, 40 )
 
+[node name="DangerBlock" parent="respawnpoint" index="2" instance=ExtResource( 13 )]
+
+position = Vector2( 174, 40 )
+
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
 position = Vector2( -416.274, 8.16223 )
 mode = 0
-tile_set = ExtResource( 13 )
+tile_set = ExtResource( 14 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
