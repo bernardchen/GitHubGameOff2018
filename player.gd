@@ -39,12 +39,13 @@ func calc_movement():
 		if is_on_wall():
 			if velocity.y > 0:
 				$Sprite.play("Wall")
+				already_dashed = false
 				velocity.y -= 5 * GRAVITY / 6
 			if Input.is_action_just_pressed("ui_up"):
 				$Sprite.play("Jump")
 				wall_jump = true
 				dir = dir * -1
-				velocity.y = JUMP_HEIGHT
+				velocity.y = -400
 				if dir == 1:
 					$Sprite.flip_h = false
 				else:
