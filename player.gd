@@ -52,15 +52,16 @@ func calc_movement():
 	
 	if Input.is_action_just_pressed("ui_select") and not already_dashed:
 		dash = true
+		velocity = Vector2(dir * 1000, 0)
 
 func _physics_process(delta):
 	velocity.y += GRAVITY
 	if dash:
+		velocity.y = 0
 		dash_cnt += delta
 		$Sprite.play("Dash")
 		if dash_cnt < DASH_LEN:
-			velocity.y = 0
-			velocity.x = dir * 700
+			velocity *= .91
 		else: 
 			dash = false
 			velocity = Vector2(0, 0)
