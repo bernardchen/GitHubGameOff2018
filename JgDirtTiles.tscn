@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16.0003, 16.0226 )
 
-[node name="JgDirtTiles" type="Node"]
+[node name="JgDirtTiles" type="Node" index="0"]
 
 [node name="0" type="Sprite" parent="." index="0"]
 
@@ -271,7 +271,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="9" type="Sprite" parent="." index="9"]
 
-position = Vector2( 0, 180 )
+position = Vector2( 0, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -300,7 +300,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="10" type="Sprite" parent="." index="10"]
 
-position = Vector2( 70, 180 )
+position = Vector2( 64, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
