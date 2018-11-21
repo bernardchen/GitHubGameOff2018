@@ -5,7 +5,7 @@ const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = -500
 const DASH_LEN = .2
-const WALL_JUMP_LEN = .3
+const WALL_JUMP_LEN = .35
 
 var velocity = Vector2()
 var wall_jump
