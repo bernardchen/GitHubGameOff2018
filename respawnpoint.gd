@@ -14,4 +14,5 @@ func _process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	$player.set_global_position($"/root/World/respt".get_global_position())
+	$player.velocity = Vector2(0, 0)
 	pass 
