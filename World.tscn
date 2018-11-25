@@ -2,16 +2,16 @@
 
 [ext_resource path="res://respawnpoint.gd" type="Script" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
-[ext_resource path="res://Player/wall_slide.png" type="Texture" id=3]
-[ext_resource path="res://Player/Idle0.png" type="Texture" id=4]
+[ext_resource path="res://Player/Dash.png" type="Texture" id=3]
+[ext_resource path="res://Player/Jump1.png" type="Texture" id=4]
 [ext_resource path="res://Player/Run0.png" type="Texture" id=5]
 [ext_resource path="res://Player/Run1.png" type="Texture" id=6]
 [ext_resource path="res://Player/Run2.png" type="Texture" id=7]
 [ext_resource path="res://Player/Run3.png" type="Texture" id=8]
 [ext_resource path="res://Player/Run4.png" type="Texture" id=9]
 [ext_resource path="res://Player/Run7.png" type="Texture" id=10]
-[ext_resource path="res://Player/Jump1.png" type="Texture" id=11]
-[ext_resource path="res://Player/Dash.png" type="Texture" id=12]
+[ext_resource path="res://Player/Idle0.png" type="Texture" id=11]
+[ext_resource path="res://Player/wall_slide.png" type="Texture" id=12]
 [ext_resource path="res://dangerblock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://bounceblock.tscn" type="PackedScene" id=14]
 [ext_resource path="res://checkpoint.tscn" type="PackedScene" id=15]
@@ -23,12 +23,12 @@
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Wall",
+"name": "Dash",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "Idle",
+"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
@@ -38,12 +38,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "Dash",
+"name": "Wall",
 "speed": 5.0
 } ]
 
@@ -52,7 +52,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 5.18499, 10.1186 )
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="respawnpoint" type="Node2D" parent="." index="0"]
 
@@ -122,8 +122,7 @@ position = Vector2( 174, 40 )
 
 [node name="bounceblock" parent="respawnpoint" index="2" instance=ExtResource( 14 )]
 
-position = Vector2( 316, 80 )
-_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+position = Vector2( 314, 80 )
 
 [node name="checkpoint" parent="." index="1" instance=ExtResource( 15 )]
 
