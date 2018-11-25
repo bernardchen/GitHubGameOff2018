@@ -1,4 +1,4 @@
-extends Node2D
+extends Position2D
 
 # class member variables go here, for example:
 # var a = 2
@@ -9,9 +9,7 @@ func _ready():
 	# Initialization here
 	pass
 
-func _process(delta):
-	pass
-
-func _on_VisibilityNotifier2D_screen_exited():
-	$player.set_global_position($"/root/World/respt".get_global_position())
-	pass 
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
