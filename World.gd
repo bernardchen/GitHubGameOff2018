@@ -39,7 +39,11 @@ func switch():
 		currWorld = 1
 
 func can_switch():
-	var tilemap = get_node("world2")
+	var tilemap
+	if currWorld == 1:
+		tilemap = world2
+	else:
+		tilemap = world1
 	if not tilemap == null:
 		var map_pos = tilemap.world_to_map(player.global_position)
 		var id = tilemap.get_cellv(map_pos)
