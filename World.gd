@@ -39,18 +39,18 @@ func switch():
 		currWorld = 1
 
 func can_switch():
-	var ret
-	if currWorld == 1:
-		to_world2()
-		ret = not player.is_on_wall()
-		to_world1()
-	else:
-		to_world1()
-		ret = not player.is_on_wall()
-		to_world2()
-	return ret
+	var tilemap = get_node("world2")
+	if not tilemap == null:
+		var map_pos = tilemap.world_to_map(player.global_position)
+		var id = tilemap.get_cellv(map_pos)
+		if id > -1:
+			return false
+		else:
+			return true
+	return false
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_switch"):
-		switch()
+		if can_switch():
+			switch()
 	pass

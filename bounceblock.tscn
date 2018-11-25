@@ -13,7 +13,7 @@ extents = Vector2( 20, 20 )
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
 
-[node name="Area2D" type="Area2D" index="0"]
+[node name="Area2D" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -46,7 +46,7 @@ _sections_unfolded = [ "Pickable", "Visibility" ]
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
 visible = false
-position = Vector2( -1.19209e-06, -1.19209e-06 )
+position = Vector2( -1.19209e-006, -1.19209e-006 )
 scale = Vector2( 1.30435, 1.30435 )
 shape = SubResource( 1 )
 

@@ -18,8 +18,8 @@ func _ready():
 #	pass
 
 func _on_body_entered(body):
-	if (start == 2):
-		$"/root/World/respawnpoint/player".velocity.y = BOUNCE_HEIGHT
-		$"/root/World/respawnpoint/player".already_dashed = false
-	else:
-		start+=1
+	#if (start == 1):
+	$"/root/World/respawnpoint/player".velocity.y = BOUNCE_HEIGHT
+	$"/root/World/respawnpoint/player".already_dashed = false
+	#else:
+	#	start+=1
