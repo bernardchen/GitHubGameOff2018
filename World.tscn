@@ -186,7 +186,6 @@ spawn_dimension = 1
 
 [node name="world2" type="TileMap" parent="." index="3"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 8 )
 cell_size = Vector2( 32, 32 )
@@ -218,6 +217,9 @@ _sections_unfolded = [ "Collision" ]
 
 position = Vector2( 2439.71, 227.212 )
 scale = Vector2( 0.81596, 2.41287 )
+collision_layer = 2
+collision_mask = 2
+_sections_unfolded = [ "Collision" ]
 
 [node name="Area2D" parent="world2" index="2" instance=ExtResource( 3 )]
 
