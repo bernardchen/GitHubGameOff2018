@@ -6,14 +6,20 @@ const SPEED = 200
 const JUMP_HEIGHT = -500
 const DASH_LEN = .2
 const WALL_JUMP_LEN = .35
+const WALL_JUMP_LIM = 5
 
 var velocity = Vector2()
 var wall_jump
 var wall_jump_cnt = 0
+var wall_jump_lim_cnt = 0
+var last_wall_jump = 1
 var dash = false
 var already_dashed = false
 var dash_cnt = 0
 var dir = 1 #right is 1, left is -1
+
+func can_wall_jump():
+	return wall_jump_lim_cnt > WALL_JUMP_LIM or dir != last_wall_jump
 
 func calc_movement():
 	if Input.is_action_pressed('ui_right'):
@@ -41,9 +47,11 @@ func calc_movement():
 				$Sprite.play("Wall")
 				already_dashed = false
 				velocity.y -= 5 * GRAVITY / 6
-			if Input.is_action_just_pressed("ui_up"):
+			if Input.is_action_just_pressed("ui_up") and can_wall_jump():
 				$Sprite.play("Jump")
 				wall_jump = true
+				wall_jump_lim_cnt = 0
+				last_wall_jump = dir
 				dir = dir * -1
 				velocity.y = -400
 				if dir == 1:
@@ -56,6 +64,8 @@ func calc_movement():
 		velocity = Vector2(dir * 1000, 0)
 
 func _physics_process(delta):
+	if wall_jump_lim_cnt < (WALL_JUMP_LIM + 1):
+		wall_jump_lim_cnt += delta
 	velocity.y += GRAVITY
 	if dash:
 		velocity.y = 0
