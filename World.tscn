@@ -109,28 +109,23 @@ spawn_dimension = 1
 position = Vector2( 274.146, 224.007 )
 text = "Use the arrow keys to move!"
 
-[node name="sign2" parent="world1" index="7" instance=ExtResource( 7 )]
-
-position = Vector2( 648.265, 224.007 )
-text = "Press up to jump"
-
-[node name="sign3" parent="world1" index="8" instance=ExtResource( 7 )]
+[node name="sign3" parent="world1" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 1446.8, 192.148 )
 text = "You'll need to dash across this one. Press space to dash"
 
-[node name="sign4" parent="world1" index="9" instance=ExtResource( 7 )]
+[node name="sign4" parent="world1" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 2097.41, 192.622 )
 text = "This is a checkpoint. Touch it, you'll need it."
 
-[node name="sign5" parent="world1" index="10" instance=ExtResource( 7 )]
+[node name="sign5" parent="world1" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 2460.18, 192.304 )
 text = "Try dashing across this one..."
 alt_text = "Hmm... didn't work. Press x to change dimensions."
 
-[node name="sign5_area2d2" type="Area2D" parent="world1" index="11"]
+[node name="sign5_area2d2" type="Area2D" parent="world1" index="10"]
 
 editor/display_folded = true
 position = Vector2( 2731.6, 651.11 )
@@ -150,13 +145,13 @@ _sections_unfolded = [ "Collision" ]
 
 shape = SubResource( 1 )
 
-[node name="sign6" parent="world1" index="12" instance=ExtResource( 7 )]
+[node name="sign6" parent="world1" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 3458.28, 191.965 )
 text = "You can wall jump by pressing up while sliding on a wall... Looks like it's a dead end."
 alt_text = "Switching dimensions is your best friend. Don't be afraid to use it."
 
-[node name="sign6_area2d" type="Area2D" parent="world1" index="13"]
+[node name="sign6_area2d" type="Area2D" parent="world1" index="12"]
 
 editor/display_folded = true
 position = Vector2( 3647.83, -111.45 )

@@ -64,7 +64,7 @@ func calc_movement():
 		if is_on_wall():
 			if velocity.y > 0:
 				$Sprite.play("Wall")
-				velocity.y = 85
+				velocity.y = 100
 			if Input.is_action_just_pressed("ui_up") and can_wall_jump():
 				$Sprite.play("Jump")
 				already_dashed = false
