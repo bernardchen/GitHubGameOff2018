@@ -21,6 +21,9 @@ var dir = 1 #right is 1, left is -1
 onready var start_checkpoint = get_parent().get_node("start")
 onready var curr_checkpoint = start_checkpoint
 
+func _ready():
+	z_index = 2
+
 #RESPAWN
 func _on_VisibilityNotifier2D_screen_exited():
 	if curr_checkpoint == start_checkpoint:

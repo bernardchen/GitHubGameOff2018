@@ -4,11 +4,15 @@ extends Area2D
 # var a = 2
 # var b = "textvar"
 
+export var text = "default text"
+export var alt_text = "default alternate text"
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	self.connect("body_entered", self, "_on_body_entered")
 	self.connect("body_exited", self, "_on_body_exited")
+	$sign/CanvasModulate/RichTextLabel.bbcode_text = "[center]" + text + "[/center]"
 	pass
 
 #func _process(delta):
@@ -18,6 +22,30 @@ func _ready():
 
 func _on_body_entered(body):
 	$sign/bubble.show()
+	$sign/CanvasModulate.show()
 
 func _on_body_exited(body):
 	$sign/bubble.hide()
+	$sign/CanvasModulate.hide()
+
+func _on_sign6_area2d_body_entered(body):
+	if name == "sign6":
+		$sign/CanvasModulate/RichTextLabel.bbcode_text = "[center]" + alt_text + "[/center]"
+	pass # replace with function body
+
+
+func _on_sign5_area2d2_body_entered(body):
+	if name == "sign5":
+		var world2 = $"/root/World/world2"
+		world2.set_cell(82, 5, 0)
+		world2.set_cell(83, 5, 1)
+		world2.set_cell(84, 5, 1)
+		world2.set_cell(85, 5, 1)
+		world2.set_cell(86, 5, 2)
+		world2.set_cell(82, 6, 6)
+		world2.set_cell(83, 6, 7)
+		world2.set_cell(84, 6, 7)
+		world2.set_cell(85, 6, 7)
+		world2.set_cell(86, 6, 8)
+		$sign/CanvasModulate/RichTextLabel.bbcode_text = "[center]" + alt_text + "[/center]"
+	pass # replace with function body
