@@ -4,19 +4,21 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = -500
-const DASH_LEN = .2
+const DASH_LEN = .25
 const WALL_JUMP_LEN = .35
 const WALL_JUMP_LIM = 4
+const BOUNCE_HEIGHT = -700
 
 var velocity = Vector2()
 var wall_jump
 var wall_jump_cnt = 0
-var wall_jump_lim_cnt = 0
+var wall_jump_lim_cnt = WALL_JUMP_LIM + 1
 var last_wall_jump = 1
 var dash = false
 var already_dashed = false
 var dash_cnt = 0
 var dir = 1 #right is 1, left is -1
+var bounce = false
 
 onready var start_checkpoint = get_parent().get_node("start")
 onready var curr_checkpoint = start_checkpoint
@@ -35,6 +37,10 @@ func _on_VisibilityNotifier2D_screen_exited():
 			get_parent().to_world2()
 	set_global_position($"/root/World/start".get_global_position())
 	velocity = Vector2(0, 0)
+	dash = false
+	wall_jump = false
+	already_dashed = false
+	wall_jump_lim_cnt = WALL_JUMP_LIM + 1
 	pass
 
 func can_wall_jump():
@@ -87,7 +93,10 @@ func _physics_process(delta):
 		wall_jump_lim_cnt += delta
 	velocity.y += GRAVITY
 	if dash:
-		velocity.y = 0
+		if bounce:
+			velocity.y = BOUNCE_HEIGHT
+		else:
+			velocity.y = 0
 		dash_cnt += delta
 		$Sprite.play("Dash")
 		if dash_cnt < DASH_LEN:
@@ -107,5 +116,8 @@ func _physics_process(delta):
 			wall_jump_cnt = 0
 	else:
 		calc_movement()
+	if bounce and not dash:
+		velocity.y = BOUNCE_HEIGHT
+		bounce = false
 	velocity = move_and_slide(velocity, UP)
 	pass
