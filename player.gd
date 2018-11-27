@@ -18,7 +18,18 @@ var already_dashed = false
 var dash_cnt = 0
 var dir = 1 #right is 1, left is -1
 
+onready var start_checkpoint = get_parent().get_node("start")
+onready var curr_checkpoint = start_checkpoint
+
+#RESPAWN
 func _on_VisibilityNotifier2D_screen_exited():
+	if curr_checkpoint == start_checkpoint:
+		get_parent().to_world1()
+	else:
+		if curr_checkpoint.spawn_dimension == 1:
+			get_parent().to_world1()
+		else:
+			get_parent().to_world2()
 	set_global_position($"/root/World/start".get_global_position())
 	velocity = Vector2(0, 0)
 	pass

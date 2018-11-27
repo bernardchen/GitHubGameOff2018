@@ -57,7 +57,7 @@ func can_switch():
 			return true
 	return false
 
-func _process(delta):
+func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_switch"):
 		if can_switch():
 			switch()
