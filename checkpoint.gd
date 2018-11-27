@@ -4,6 +4,7 @@ extends Area2D
 # var a = 2
 # var b = "textvar"
 export var spawn_dimension = 1;
+onready var start = $"/root/World/start"
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -17,5 +18,5 @@ func _ready():
 #	pass
 
 func _on_body_entered(body):
-	if ($"/root/World/respt".get_global_position() != self.get_global_position()):
-		$"/root/World/respt".set_global_position(self.get_global_position())
+	if (start.get_global_position() != self.get_global_position()):
+		start.set_global_position(self.get_global_position())

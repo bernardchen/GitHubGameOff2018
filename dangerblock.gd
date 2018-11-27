@@ -13,4 +13,4 @@ func _process(delta):
 	pass
 
 func _on_body_entered(body):
-	$"/root/World/respawnpoint/player".set_global_position($"/root/World/respt".get_global_position())
+	$"/root/World/player".set_global_position($"/root/World/start".get_global_position())

@@ -6,7 +6,7 @@ const SPEED = 200
 const JUMP_HEIGHT = -500
 const DASH_LEN = .2
 const WALL_JUMP_LEN = .35
-const WALL_JUMP_LIM = 5
+const WALL_JUMP_LIM = 4
 
 var velocity = Vector2()
 var wall_jump
@@ -17,6 +17,11 @@ var dash = false
 var already_dashed = false
 var dash_cnt = 0
 var dir = 1 #right is 1, left is -1
+
+func _on_VisibilityNotifier2D_screen_exited():
+	set_global_position($"/root/World/start".get_global_position())
+	velocity = Vector2(0, 0)
+	pass
 
 func can_wall_jump():
 	return wall_jump_lim_cnt > WALL_JUMP_LIM or dir != last_wall_jump
@@ -45,10 +50,10 @@ func calc_movement():
 		if is_on_wall():
 			if velocity.y > 0:
 				$Sprite.play("Wall")
-				already_dashed = false
-				velocity.y -= 5 * GRAVITY / 6
+				velocity.y = 85
 			if Input.is_action_just_pressed("ui_up") and can_wall_jump():
 				$Sprite.play("Jump")
+				already_dashed = false
 				wall_jump = true
 				wall_jump_lim_cnt = 0
 				last_wall_jump = dir
