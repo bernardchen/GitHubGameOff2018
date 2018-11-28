@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://sign.tscn" type="PackedScene" id=7]
 [ext_resource path="res://DimDirtTileset.tres" type="TileSet" id=8]
 [ext_resource path="res://world2.gd" type="Script" id=9]
+[ext_resource path="res://Fonts/pixel_font.tres" type="DynamicFont" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -21,7 +22,7 @@ script = ExtResource( 1 )
 
 [node name="start" type="Position2D" parent="." index="0"]
 
-position = Vector2( 3652.63, 139.446 )
+position = Vector2( 125.806, 87.3892 )
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -56,7 +57,6 @@ _sections_unfolded = [ "Limit", "Smoothing" ]
 
 [node name="world1" type="TileMap" parent="." index="2"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
@@ -117,7 +117,7 @@ text = "You'll need to dash across this one. Press space to dash"
 
 [node name="sign4" parent="world1" index="8" instance=ExtResource( 7 )]
 
-position = Vector2( 2097.41, 192.622 )
+position = Vector2( 2005.11, 160.804 )
 text = "This is a checkpoint. Touch it, you'll need it."
 
 [node name="sign5" parent="world1" index="9" instance=ExtResource( 7 )]
@@ -229,6 +229,48 @@ collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 spawn_dimension = 2
+
+[node name="Tween" type="Tween" parent="." index="4"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+_sections_unfolded = [ "playback" ]
+
+[node name="switch_warning" type="CanvasLayer" parent="." index="5"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Label" type="Label" parent="switch_warning" index="0"]
+
+modulate = Color( 1, 0, 0, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 9.0
+margin_top = 9.0
+margin_right = 157.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 10 )
+text = "Warning: cannot switch"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Visibility", "custom_fonts", "custom_styles" ]
 
 [connection signal="body_entered" from="world1/sign5_area2d2" to="world1/sign5" method="_on_sign5_area2d2_body_entered"]
 

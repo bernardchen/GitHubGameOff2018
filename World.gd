@@ -3,6 +3,7 @@ extends Node
 onready var world1 = get_node("world1")
 onready var world2 = get_node("world2")
 onready var player = get_node("player")
+
 var faded_color = Color(1.0, 1.0, 1.0, 0.25)
 var currWorld = 1 #1 is world1, 2 is world2
 
@@ -52,6 +53,8 @@ func can_switch():
 		map_pos = tilemap.world_to_map(player.global_position - extents)
 		var id2 = tilemap.get_cellv(map_pos)
 		if id0 > -1 or id1 > -1 or id2 > -1:
+			$Tween.interpolate_property($switch_warning/Label, "modulate", Color(1, 0, 0, 1), Color(1, 0, 0, 0), 1.3, 0, 0)
+			$Tween.start()
 			return false
 		else:
 			return true

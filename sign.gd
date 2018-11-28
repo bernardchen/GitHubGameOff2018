@@ -12,7 +12,7 @@ func _ready():
 	# Initialization here
 	self.connect("body_entered", self, "_on_body_entered")
 	self.connect("body_exited", self, "_on_body_exited")
-	$sign/CanvasModulate/RichTextLabel.bbcode_text = "[center]" + text + "[/center]"
+	$sign/Label.text = text
 	pass
 
 #func _process(delta):
@@ -22,15 +22,15 @@ func _ready():
 
 func _on_body_entered(body):
 	$sign/bubble.show()
-	$sign/CanvasModulate.show()
+	$sign/Label.show()
 
 func _on_body_exited(body):
 	$sign/bubble.hide()
-	$sign/CanvasModulate.hide()
+	$sign/Label.hide()
 
 func _on_sign6_area2d_body_entered(body):
 	if name == "sign6":
-		$sign/CanvasModulate/RichTextLabel.bbcode_text = "[center]" + alt_text + "[/center]"
+		$sign/Label.text = alt_text
 	pass # replace with function body
 
 
@@ -47,5 +47,5 @@ func _on_sign5_area2d2_body_entered(body):
 		world2.set_cell(84, 6, 7)
 		world2.set_cell(85, 6, 7)
 		world2.set_cell(86, 6, 8)
-		$sign/CanvasModulate/RichTextLabel.bbcode_text = "[center]" + alt_text + "[/center]"
+		$sign/Label.text = alt_text
 	pass # replace with function body
