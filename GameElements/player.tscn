@@ -1,16 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://Player/Idle0.png" type="Texture" id=2]
-[ext_resource path="res://Player/Run0.png" type="Texture" id=3]
-[ext_resource path="res://Player/Run1.png" type="Texture" id=4]
-[ext_resource path="res://Player/Run2.png" type="Texture" id=5]
-[ext_resource path="res://Player/Run3.png" type="Texture" id=6]
-[ext_resource path="res://Player/Run4.png" type="Texture" id=7]
-[ext_resource path="res://Player/Run7.png" type="Texture" id=8]
-[ext_resource path="res://Player/Dash.png" type="Texture" id=9]
-[ext_resource path="res://Player/Jump1.png" type="Texture" id=10]
-[ext_resource path="res://Player/wall_slide.png" type="Texture" id=11]
+[ext_resource path="res://GameElements/player.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/Idle0.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Run0.png" type="Texture" id=3]
+[ext_resource path="res://Tiles/Run1.png" type="Texture" id=4]
+[ext_resource path="res://Tiles/Run2.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/Run3.png" type="Texture" id=6]
+[ext_resource path="res://Tiles/Run4.png" type="Texture" id=7]
+[ext_resource path="res://Tiles/Dash.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/Jump1.png" type="Texture" id=9]
+[ext_resource path="res://Tiles/wall_slide.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -20,22 +19,22 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "Dash",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "Wall",
 "speed": 5.0

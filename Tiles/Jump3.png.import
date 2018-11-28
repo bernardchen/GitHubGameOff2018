@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Idle0.png-14170a6773db52a8f4bc8290a81ae0dc.stex"
+path="res://.import/Jump3.png-8ec1960c8dbaf3ad710ffc3a400c52f1.stex"
 
 [deps]
 
-source_file="res://Player/Idle0.png"
-dest_files=[ "res://.import/Idle0.png-14170a6773db52a8f4bc8290a81ae0dc.stex" ]
+source_file="res://Tiles/Jump3.png"
+dest_files=[ "res://.import/Jump3.png-8ec1960c8dbaf3ad710ffc3a400c52f1.stex" ]
 
 [params]
 

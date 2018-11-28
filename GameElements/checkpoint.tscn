@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://checkpoint.gd" type="Script" id=1]
+[ext_resource path="res://GameElements/checkpoint.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -21,6 +21,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+spawn_dimension = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

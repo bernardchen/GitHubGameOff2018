@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://bounceblock.gd" type="Script" id=1]
+[ext_resource path="res://GameElements/bounceblock.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -27,7 +27,7 @@ _sections_unfolded = [ "Collision", "Pickable" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 9.53674e-07, -9.53674e-07 )
+position = Vector2( 9.53674e-007, -9.53674e-007 )
 scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -36,7 +36,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 
-position = Vector2( 4.76837e-07, 4.76837e-07 )
+position = Vector2( 4.76837e-007, 4.76837e-007 )
 scale = Vector2( 0.625, 0.625 )
 input_pickable = false
 collision_layer = 1

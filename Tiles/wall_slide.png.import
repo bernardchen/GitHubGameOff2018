@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump1.png-60754d82ab5509db7c787c6bcb90d66e.stex"
+path="res://.import/wall_slide.png-17c4be4994989ed75609244fc1fda431.stex"
 
 [deps]
 
-source_file="res://Player/Jump1.png"
-dest_files=[ "res://.import/Jump1.png-60754d82ab5509db7c787c6bcb90d66e.stex" ]
+source_file="res://Tiles/wall_slide.png"
+dest_files=[ "res://.import/wall_slide.png-17c4be4994989ed75609244fc1fda431.stex" ]
 
 [params]
 

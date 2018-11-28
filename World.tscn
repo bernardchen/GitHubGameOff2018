@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
-[ext_resource path="res://player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://JgDirtTileset.tres" type="TileSet" id=3]
-[ext_resource path="res://bounceblock.tscn" type="PackedScene" id=4]
-[ext_resource path="res://dangerblock.tscn" type="PackedScene" id=5]
-[ext_resource path="res://checkpoint.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sign.tscn" type="PackedScene" id=7]
-[ext_resource path="res://DimDirtTileset.tres" type="TileSet" id=8]
+[ext_resource path="res://GameElements/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tilesets/JgDirtTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://GameElements/bounceblock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameElements/dangerblock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameElements/checkpoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameElements/sign.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Tilesets/DimDirtTileset.tres" type="TileSet" id=8]
 [ext_resource path="res://world2.gd" type="Script" id=9]
-[ext_resource path="res://Fonts/pixel_font.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,7 +22,7 @@ script = ExtResource( 1 )
 
 [node name="start" type="Position2D" parent="." index="0"]
 
-position = Vector2( 125.806, 87.3892 )
+position = Vector2( 2316.37, 87.3892 )
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -33,7 +33,7 @@ position = Vector2( 135.57, 194.949 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 1, 1 )
 limit_left = 30
 limit_top = -900
 limit_right = 7040
@@ -45,14 +45,14 @@ smoothing_enabled = true
 smoothing_speed = 5.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
+drag_margin_left = 0.17
+drag_margin_top = 0.17
+drag_margin_right = 0.17
+drag_margin_bottom = 0.17
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Limit", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Editor" ]
 
 [node name="world1" type="TileMap" parent="." index="2"]
 
@@ -97,33 +97,31 @@ scale = Vector2( 1, 5.00257 )
 [node name="checkpoint1" parent="world1" index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 2210.12, 96.7935 )
-spawn_dimension = 1
 
 [node name="checkpoint2" parent="world1" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 3283.31, 161.268 )
-spawn_dimension = 1
 
 [node name="sign" parent="world1" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 274.146, 224.007 )
-text = "Use the arrow keys to move!"
+text = "Use the arrow keys to move"
 
 [node name="sign3" parent="world1" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 1446.8, 192.148 )
-text = "You'll need to dash across this one. Press space to dash"
+text = "Press space to dash"
 
 [node name="sign4" parent="world1" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 2005.11, 160.804 )
-text = "This is a checkpoint. Touch it, you'll need it."
+text = "Vending machines are checkpoints"
 
 [node name="sign5" parent="world1" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 2460.18, 192.304 )
 text = "Try dashing across this one..."
-alt_text = "Hmm... didn't work. Press x to change dimensions."
+alt_text = "Hmm... that didn't work. Try switching dimensions by pressing x"
 
 [node name="sign5_area2d2" type="Area2D" parent="world1" index="10"]
 
@@ -148,8 +146,8 @@ shape = SubResource( 1 )
 [node name="sign6" parent="world1" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 3458.28, 191.965 )
-text = "You can wall jump by pressing up while sliding on a wall... Looks like it's a dead end."
-alt_text = "Switching dimensions is your best friend. Don't be afraid to use it."
+text = "Looks like a dead end. Can you go up?"
+alt_text = "Switching dimensions is your best friend..."
 
 [node name="sign6_area2d" type="Area2D" parent="world1" index="12"]
 
@@ -170,7 +168,6 @@ shape = SubResource( 1 )
 
 [node name="world2" type="TileMap" parent="." index="3"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 8 )
 cell_size = Vector2( 32, 32 )
@@ -219,7 +216,7 @@ position = Vector2( 3891.17, 191.733 )
 collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Collision" ]
-text = "This is a [bounceblock]. Try it out."
+text = "This is a bounceblock"
 
 [node name="checkpoint3" parent="world2" index="4" instance=ExtResource( 6 )]
 
