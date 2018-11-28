@@ -11,7 +11,6 @@ config_version=3
 [application]
 
 config/name="test_platformer"
-run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
 [display]
