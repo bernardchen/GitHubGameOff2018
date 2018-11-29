@@ -1,20 +1,24 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://GameElements/World.gd" type="Script" id=1]
 [ext_resource path="res://GameElements/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Tilesets/ocementtiles.tres" type="TileSet" id=3]
 [ext_resource path="res://Tiles/a.png" type="Texture" id=4]
 [ext_resource path="res://GameElements/bounceblocko.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GameElements/leftdangerblockb.tscn" type="PackedScene" id=6]
-[ext_resource path="res://GameElements/mid3spandangerblockb.tscn" type="PackedScene" id=7]
-[ext_resource path="res://GameElements/middangerblockb.tscn" type="PackedScene" id=8]
-[ext_resource path="res://GameElements/rightdangerblockb.tscn" type="PackedScene" id=9]
+[ext_resource path="res://GameElements/leftdangerblocko.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GameElements/mid3spandangerblocko.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GameElements/middangerblocko.tscn" type="PackedScene" id=8]
+[ext_resource path="res://GameElements/rightdangerblocko.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameElements/bluecheckpoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GameElements/osign.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Tilesets/bcementtiles.tres" type="TileSet" id=12]
 [ext_resource path="res://Tutorial/world2.gd" type="Script" id=13]
 [ext_resource path="res://Tiles/b.png" type="Texture" id=14]
-[ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=15]
+[ext_resource path="res://GameElements/leftdangerblockb.tscn" type="PackedScene" id=15]
+[ext_resource path="res://GameElements/rightdangerblockb.tscn" type="PackedScene" id=16]
+[ext_resource path="res://GameElements/mid3spandangerblockb.tscn" type="PackedScene" id=17]
+[ext_resource path="res://GameElements/middangerblockb.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -95,98 +99,86 @@ _sections_unfolded = [ "Z Index" ]
 
 position = Vector2( 5328.22, -113.018 )
 
-[node name="DangerBlock3" parent="world1" index="2" instance=ExtResource( 6 )]
-
-position = Vector2( 3645.54, -378.73 )
-scale = Vector2( 0.906624, 1 )
-
-[node name="DangerBlock4" parent="world1" index="3" instance=ExtResource( 6 )]
+[node name="DangerBlock14" parent="world1" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 5328.22, -1.58873 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock" parent="world1" index="4" instance=ExtResource( 7 )]
+[node name="DangerBlock4" parent="world1" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 5392.14, -1.36773 )
 
-[node name="DangerBlock5" parent="world1" index="5" instance=ExtResource( 7 )]
+[node name="DangerBlock" parent="world1" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 5487.5, -1.66272 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock6" parent="world1" index="6" instance=ExtResource( 8 )]
+[node name="DangerBlock5" parent="world1" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 5550.9, -1.6375 )
 
-[node name="DangerBlock8" parent="world1" index="7" instance=ExtResource( 8 )]
+[node name="DangerBlock6" parent="world1" index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 5582.88, -1.84519 )
 
-[node name="DangerBlock7" parent="world1" index="8" instance=ExtResource( 9 )]
+[node name="DangerBlock8" parent="world1" index="7" instance=ExtResource( 9 )]
 
 position = Vector2( 5614.83, -1.6375 )
 
-[node name="DangerBlock2" parent="world1" index="9" instance=ExtResource( 7 )]
+[node name="DangerBlock7" parent="world1" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 5616.55, -65.1038 )
 rotation = -1.5708
-_sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock9" parent="world1" index="10" instance=ExtResource( 7 )]
+[node name="DangerBlock2" parent="world1" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 5616.77, -160.572 )
 rotation = -1.5708
-_sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock10" parent="world1" index="11" instance=ExtResource( 7 )]
+[node name="DangerBlock9" parent="world1" index="10" instance=ExtResource( 7 )]
 
 position = Vector2( 5616.77, -256.478 )
 rotation = -1.5708
-_sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock11" parent="world1" index="12" instance=ExtResource( 7 )]
+[node name="DangerBlock10" parent="world1" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 5616.77, -352.722 )
 rotation = -1.5708
-_sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock12" parent="world1" index="13" instance=ExtResource( 9 )]
+[node name="DangerBlock11" parent="world1" index="12" instance=ExtResource( 9 )]
 
 position = Vector2( 5616.8, -416.669 )
 rotation = -1.5708
-_sections_unfolded = [ "Transform" ]
 
-[node name="checkpoint1" parent="world1" index="14" instance=ExtResource( 10 )]
+[node name="checkpoint1" parent="world1" index="13" instance=ExtResource( 10 )]
 
 position = Vector2( 2210.12, 111.794 )
 
-[node name="checkpoint2" parent="world1" index="15" instance=ExtResource( 10 )]
+[node name="checkpoint2" parent="world1" index="14" instance=ExtResource( 10 )]
 
 position = Vector2( 3283.31, 176.268 )
 
-[node name="sign" parent="world1" index="16" instance=ExtResource( 11 )]
+[node name="sign" parent="world1" index="15" instance=ExtResource( 11 )]
 
 position = Vector2( 274.146, 229.007 )
 _sections_unfolded = [ "Transform" ]
 text = "Use the arrow keys to move"
 
-[node name="sign3" parent="world1" index="17" instance=ExtResource( 11 )]
+[node name="sign3" parent="world1" index="16" instance=ExtResource( 11 )]
 
 position = Vector2( 1446.8, 197.148 )
 text = "Press space to dash"
 
-[node name="sign4" parent="world1" index="18" instance=ExtResource( 11 )]
+[node name="sign4" parent="world1" index="17" instance=ExtResource( 11 )]
 
 position = Vector2( 2005.11, 165.804 )
 text = "Vending machines are checkpoints"
 
-[node name="sign5" parent="world1" index="19" instance=ExtResource( 11 )]
+[node name="sign5" parent="world1" index="18" instance=ExtResource( 11 )]
 
 position = Vector2( 2460.18, 197.304 )
 text = "Try dashing across this one..."
 alt_text = "Hmm... that didn't work. Try switching dimensions by pressing x"
 
-[node name="sign5_area2d2" type="Area2D" parent="world1" index="20"]
+[node name="sign5_area2d2" type="Area2D" parent="world1" index="19"]
 
 editor/display_folded = true
 position = Vector2( 2704.25, 643.975 )
@@ -206,13 +198,13 @@ _sections_unfolded = [ "Collision" ]
 
 shape = SubResource( 1 )
 
-[node name="sign6" parent="world1" index="21" instance=ExtResource( 11 )]
+[node name="sign6" parent="world1" index="20" instance=ExtResource( 11 )]
 
 position = Vector2( 3458.28, 196.965 )
 text = "Looks like a dead end. Can you go up?"
 alt_text = "Switching dimensions is your best friend..."
 
-[node name="sign6_area2d" type="Area2D" parent="world1" index="22"]
+[node name="sign6_area2d" type="Area2D" parent="world1" index="21"]
 
 editor/display_folded = true
 position = Vector2( 3647.83, -106.45 )
@@ -228,6 +220,18 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world1/sign6_area2d" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="DangerBlock13" parent="world1" index="22" instance=ExtResource( 6 )]
+
+position = Vector2( 3664.1, -399.929 )
+rotation = -3.14159
+scale = Vector2( 1.09379, 1 )
+
+[node name="DangerBlock3" parent="world1" index="23" instance=ExtResource( 9 )]
+
+position = Vector2( 3631.21, -399.929 )
+rotation = 3.14159
+_sections_unfolded = [ "Transform" ]
 
 [node name="world2" type="TileMap" parent="." index="3"]
 
@@ -265,21 +269,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="DangerBlock2" parent="world2" index="1" instance=ExtResource( 6 )]
+[node name="DangerBlock2" parent="world2" index="1" instance=ExtResource( 15 )]
 
 position = Vector2( 3952.29, 271.8 )
 collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock" parent="world2" index="2" instance=ExtResource( 9 )]
+[node name="DangerBlock" parent="world2" index="2" instance=ExtResource( 16 )]
 
 position = Vector2( 4206.73, 271.8 )
 collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock8" parent="world2" index="3" instance=ExtResource( 9 )]
+[node name="DangerBlock8" parent="world2" index="3" instance=ExtResource( 16 )]
 
 position = Vector2( 4207.54, 176.492 )
 rotation = -1.5708
@@ -287,26 +291,26 @@ collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock3" parent="world2" index="4" instance=ExtResource( 7 )]
+[node name="DangerBlock3" parent="world2" index="4" instance=ExtResource( 17 )]
 
 position = Vector2( 4015.75, 271.796 )
 collision_layer = 2
 collision_mask = 2
 
-[node name="DangerBlock4" parent="world2" index="5" instance=ExtResource( 7 )]
+[node name="DangerBlock4" parent="world2" index="5" instance=ExtResource( 17 )]
 
 position = Vector2( 4111.03, 271.796 )
 collision_layer = 2
 collision_mask = 2
 
-[node name="DangerBlock5" parent="world2" index="6" instance=ExtResource( 8 )]
+[node name="DangerBlock5" parent="world2" index="6" instance=ExtResource( 18 )]
 
 position = Vector2( 4175, 271.8 )
 collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock6" parent="world2" index="7" instance=ExtResource( 8 )]
+[node name="DangerBlock6" parent="world2" index="7" instance=ExtResource( 18 )]
 
 position = Vector2( 4207.56, 240.428 )
 rotation = -1.5708
@@ -314,7 +318,7 @@ collision_layer = 2
 collision_mask = 2
 _sections_unfolded = [ "Transform" ]
 
-[node name="DangerBlock7" parent="world2" index="8" instance=ExtResource( 8 )]
+[node name="DangerBlock7" parent="world2" index="8" instance=ExtResource( 18 )]
 
 position = Vector2( 4207.56, 208.864 )
 rotation = -1.5708
@@ -379,7 +383,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 15 )
+custom_fonts/font = ExtResource( 19 )
 text = "Warning: cannot switch"
 percent_visible = 1.0
 lines_skipped = 0
