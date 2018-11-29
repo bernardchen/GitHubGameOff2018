@@ -1,12 +1,27 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameElements/checkpoint.gd" type="Script" id=1]
-[ext_resource path="res://Tiles/tileset.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/blue vending on.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/blue vending off.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 40, 46.1463 )
+extents = Vector2( 32.0498, 39.013 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+} ]
 
 [node name="checkpoint" type="Area2D" index="0"]
 
@@ -26,17 +41,14 @@ spawn_dimension = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 visible = false
-position = Vector2( 0, 2.64533 )
-scale = Vector2( 1, 1.29502 )
+position = Vector2( 0, -0.881167 )
+scale = Vector2( 1, 1.21108 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="vending" type="AnimatedSprite" parent="." index="1"]
 
-z_index = -1
-texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 32, 384, 80, 128 )
-_sections_unfolded = [ "Offset", "Z Index" ]
+frames = SubResource( 2 )
+animation = "off"
 
 

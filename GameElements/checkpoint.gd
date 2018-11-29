@@ -12,6 +12,7 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	self.connect("body_entered", self, "_on_body_entered")
+	$vending.play("off")
 	pass
 
 func _on_body_entered(body):
@@ -19,3 +20,4 @@ func _on_body_entered(body):
 		start.set_global_position(self.get_global_position())
 		player.curr_checkpoint = self
 		already_triggered = true
+		$vending.play("on")

@@ -8,6 +8,7 @@ onready var player = $"/root/World/player"
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	$vent.play("off")
 	pass
 
 func _physics_process(delta):
@@ -15,4 +16,7 @@ func _physics_process(delta):
 #	# Update game logic here
 	if overlaps_body(player):
 		player.bounce = true
+		$vent.play("on")
+	else:
+		$vent.play("off")
 	pass

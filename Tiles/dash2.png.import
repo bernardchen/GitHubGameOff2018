@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex"
+path="res://.import/dash2.png-31bfc2ff65dfea44b5a1b5b4fec07b70.stex"
 
 [deps]
 
-source_file="res://Tiles/run3.png"
-dest_files=[ "res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex" ]
+source_file="res://Tiles/dash2.png"
+dest_files=[ "res://.import/dash2.png-31bfc2ff65dfea44b5a1b5b4fec07b70.stex" ]
 
 [params]
 

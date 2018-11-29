@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex"
+path="res://.import/oventanim1.png-f8fa60fb891684fdcb50df5b69090b38.stex"
 
 [deps]
 
-source_file="res://Tiles/run3.png"
-dest_files=[ "res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex" ]
+source_file="res://Tiles/oventanim1.png"
+dest_files=[ "res://.import/oventanim1.png-f8fa60fb891684fdcb50df5b69090b38.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex"
+path="res://.import/blue vending on.png-ad6a5504bcc2f066fe8ae40df9a27254.stex"
 
 [deps]
 
-source_file="res://Tiles/run3.png"
-dest_files=[ "res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex" ]
+source_file="res://Tiles/blue vending on.png"
+dest_files=[ "res://.import/blue vending on.png-ad6a5504bcc2f066fe8ae40df9a27254.stex" ]
 
 [params]
 

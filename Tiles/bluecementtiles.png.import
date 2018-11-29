@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex"
+path="res://.import/bluecementtiles.png-e565096668e99203ace2d4db793b8e3e.stex"
 
 [deps]
 
-source_file="res://Tiles/run3.png"
-dest_files=[ "res://.import/run3.png-b2b1a380135c6a2d6032f4b7e29b4263.stex" ]
+source_file="res://Tiles/bluecementtiles.png"
+dest_files=[ "res://.import/bluecementtiles.png-e565096668e99203ace2d4db793b8e3e.stex" ]
 
 [params]
 

@@ -1,51 +1,50 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://GameElements/player.gd" type="Script" id=1]
-[ext_resource path="res://Tiles/Idle0.png" type="Texture" id=2]
-[ext_resource path="res://Tiles/Run0.png" type="Texture" id=3]
-[ext_resource path="res://Tiles/Run1.png" type="Texture" id=4]
-[ext_resource path="res://Tiles/Run2.png" type="Texture" id=5]
-[ext_resource path="res://Tiles/Run3.png" type="Texture" id=6]
-[ext_resource path="res://Tiles/Run4.png" type="Texture" id=7]
-[ext_resource path="res://Tiles/Dash.png" type="Texture" id=8]
-[ext_resource path="res://Tiles/Jump1.png" type="Texture" id=9]
-[ext_resource path="res://Tiles/wall_slide.png" type="Texture" id=10]
+[ext_resource path="res://Tiles/Run1.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Run2.png" type="Texture" id=3]
+[ext_resource path="res://Tiles/Run3.png" type="Texture" id=4]
+[ext_resource path="res://Tiles/idle-1.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/wallslide.png" type="Texture" id=6]
+[ext_resource path="res://Tiles/jump.png" type="Texture" id=7]
+[ext_resource path="res://Tiles/dash1.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/dash2.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "Run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "Dash",
+"name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Wall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "Wall",
-"speed": 5.0
+"name": "Dash",
+"speed": 15.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5.18499, 10.1186 )
+extents = Vector2( 5.79312, 9.39587 )
 
-[node name="player" type="KinematicBody2D" index="0"]
+[node name="player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -64,8 +63,7 @@ animation = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
-position = Vector2( 0.476825, 3.27332 )
+position = Vector2( 0.476825, 0.273322 )
 scale = Vector2( 2.88106, 2.84635 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
