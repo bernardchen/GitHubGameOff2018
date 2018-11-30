@@ -67,7 +67,6 @@ _sections_unfolded = [ "Drag Margin", "Editor" ]
 
 [node name="world1" type="TileMap" parent="." index="2"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
