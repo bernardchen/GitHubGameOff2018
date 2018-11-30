@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://GameElements/World.gd" type="Script" id=1]
 [ext_resource path="res://GameElements/player.tscn" type="PackedScene" id=2]
@@ -23,13 +23,14 @@
 [ext_resource path="res://GameElements/bounceblockb.tscn" type="PackedScene" id=21]
 [ext_resource path="res://GameElements/bsign.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=23]
+[ext_resource path="res://GameElements/pausemenu.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 31.4897, 10 )
 
-[node name="World" type="Node"]
+[node name="World" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -353,7 +354,12 @@ position = Vector2( 3953, 207 )
 [node name="sign" parent="world2" index="6" instance=ExtResource( 22 )]
 
 position = Vector2( 3837.2, 198.045 )
-text = "Try using the air stream by itself or with a dash"
+text = "The air will push you farther if you dash at the same time!"
+
+[node name="sign2" parent="world2" index="7" instance=ExtResource( 22 )]
+
+position = Vector2( 4650.95, 165.967 )
+text = "Best of luck. Remember, you can pause and unpause with p"
 
 [node name="Tween" type="Tween" parent="." index="4"]
 
@@ -396,6 +402,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Visibility", "custom_fonts", "custom_styles" ]
+
+[node name="paused" parent="switch_warning" index="1" instance=ExtResource( 24 )]
+
+visible = false
 
 [connection signal="body_entered" from="world1/sign5_area2d2" to="world1/sign5" method="_on_sign5_area2d2_body_entered"]
 
