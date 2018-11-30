@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GameElements/checkpoint.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/orange vending on.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/orange vending off.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.0498, 39.013 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+} ]
+
+[node name="checkpoint" type="Area2D" index="0"]
+
+z_index = 1
+z_as_relative = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+spawn_dimension = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+visible = false
+position = Vector2( 0, -0.881167 )
+scale = Vector2( 1, 1.21108 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="vending" type="AnimatedSprite" parent="." index="1"]
+
+frames = SubResource( 2 )
+animation = "off"
+
+

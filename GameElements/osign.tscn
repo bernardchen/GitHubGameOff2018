@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameElements/sign.gd" type="Script" id=1]
-[ext_resource path="res://Tiles/tileset.png" type="Texture" id=2]
-[ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Tiles/orangesign.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/bubble.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -30,7 +31,6 @@ shape = SubResource( 1 )
 [node name="sign" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
-region_enabled = true
 region_rect = Rect2( 432, 352, 72, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
@@ -39,8 +39,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 visible = false
 position = Vector2( -0.118103, -94.5925 )
 scale = Vector2( 2.84705, 2.20034 )
-texture = ExtResource( 2 )
-region_enabled = true
+texture = ExtResource( 3 )
 region_rect = Rect2( 424, 296, 88, 56 )
 _sections_unfolded = [ "Region", "Visibility" ]
 
@@ -61,7 +60,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "default text"
 align = 1
