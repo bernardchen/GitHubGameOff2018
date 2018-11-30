@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Tiles/orangecementtile.png" type="Texture" id=1]
-[ext_resource path="res://Tiles/orangextiles.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/bluecementtiles.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/bluextiles.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -466,7 +466,7 @@ position = Vector2( 192, 64 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 32, 32 )
+region_rect = Rect2( 0, 32, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -526,7 +526,7 @@ position = Vector2( 320, 64 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 64, 0, 32, 32 )
+region_rect = Rect2( 64, 32, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
