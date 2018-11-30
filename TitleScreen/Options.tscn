@@ -6,7 +6,7 @@
 [ext_resource path="res://TitleScreen/unchecked.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=5]
 
-[node name="Options" type="Control"]
+[node name="Options" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -168,7 +168,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 360.0
+margin_left = -34.0
+margin_right = 326.0
 margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -177,7 +178,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "Background music"
+text = "Sound effects"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0

@@ -1,6 +1,8 @@
 extends Control
 
 func _ready():
+	$BGM/BGM.pressed = global.play_bgm
+	$SFX/SFX.pressed = global.play_sfx
 	$menu.grab_focus()
 
 func _on_BGM_button_up():

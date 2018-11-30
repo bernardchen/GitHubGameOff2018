@@ -9,7 +9,7 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "loading",
-"speed": 10.0
+"speed": 15.0
 } ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" index="0"]
