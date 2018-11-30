@@ -4,9 +4,9 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
 const JUMP_HEIGHT = -500
-const DASH_LEN = .25
+const DASH_LEN = .27
 const WALL_JUMP_LEN = .35
-const WALL_JUMP_LIM = 2.5
+const WALL_JUMP_LIM = 1.5
 const BOUNCE_HEIGHT = -700
 
 var velocity = Vector2()
@@ -25,6 +25,7 @@ onready var curr_checkpoint = start_checkpoint
 
 func _ready():
 	z_index = 2
+	set_global_position($"/root/World/start".get_global_position())
 
 #RESPAWN
 func _on_VisibilityNotifier2D_screen_exited():

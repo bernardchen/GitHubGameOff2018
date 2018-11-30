@@ -6,13 +6,13 @@
 [ext_resource path="res://Tiles/oventanim3.png" type="Texture" id=4]
 [ext_resource path="res://Tiles/oventidle.png" type="Texture" id=5]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "on",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
@@ -20,17 +20,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 19.6411, 19.4907 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 15.9009, 20 )
 
-[node name="bounceblock" type="Area2D"]
+[node name="bounceblock" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -44,14 +44,15 @@ _sections_unfolded = [ "Collision", "Pickable" ]
 
 [node name="vent" type="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( 9.53674e-07, -9.53674e-07 )
-frames = SubResource( 3 )
-animation = "off"
+position = Vector2( 9.53674e-007, -9.53674e-007 )
+frames = SubResource( 1 )
+animation = "on"
+frame = 1
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 
-position = Vector2( 4.76837e-07, 41 )
+position = Vector2( 4.76837e-007, 41 )
 scale = Vector2( 0.625, 0.625 )
 input_pickable = false
 collision_layer = 1
@@ -65,15 +66,15 @@ _sections_unfolded = [ "Pickable", "Transform", "Visibility" ]
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
 visible = false
-position = Vector2( -1.19209e-06, -12.8 )
+position = Vector2( -1.19209e-006, -12.8 )
 scale = Vector2( 1.30435, 1.30435 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
 visible = false
 position = Vector2( -0.0209272, -21.5506 )
 scale = Vector2( 1.00682, 2.17391 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 

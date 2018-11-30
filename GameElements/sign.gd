@@ -12,6 +12,8 @@ func _ready():
 	# Initialization here
 	self.connect("body_entered", self, "_on_body_entered")
 	self.connect("body_exited", self, "_on_body_exited")
+	$sign/bubble.hide()
+	$sign/Label.hide()
 	$sign/Label.text = text
 	pass
 

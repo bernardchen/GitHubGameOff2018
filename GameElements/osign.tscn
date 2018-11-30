@@ -8,9 +8,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 30, 30 )
+extents = Vector2( 30, 27.3907 )
 
-[node name="sign" type="Area2D"]
+[node name="sign" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -26,6 +26,7 @@ alt_text = "default alternate text"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 visible = false
+position = Vector2( 0.300003, -2.03558 )
 shape = SubResource( 1 )
 
 [node name="sign" type="Sprite" parent="." index="1"]
@@ -50,10 +51,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -111.0
-margin_top = -144.0
-margin_right = 102.0
-margin_bottom = -48.0
+margin_left = -107.0
+margin_top = -145.0
+margin_right = 106.0
+margin_bottom = -46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

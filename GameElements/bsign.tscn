@@ -8,24 +8,28 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 30, 30 )
+extents = Vector2( 30, 27.4144 )
 
-[node name="sign" type="Area2D"]
+[node name="sign" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 2
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 text = "default text"
 alt_text = "default alternate text"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 visible = false
+position = Vector2( -0.214642, -2.36104 )
 shape = SubResource( 1 )
 
 [node name="sign" type="Sprite" parent="." index="1"]
@@ -36,6 +40,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="bubble" type="Sprite" parent="sign" index="0"]
 
+visible = false
 position = Vector2( -0.118103, -94.5925 )
 scale = Vector2( 2.84705, 2.20034 )
 texture = ExtResource( 3 )
@@ -49,10 +54,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -111.0
-margin_top = -144.0
-margin_right = 102.0
-margin_bottom = -48.0
+margin_left = -106.0
+margin_top = -145.0
+margin_right = 107.0
+margin_bottom = -45.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
