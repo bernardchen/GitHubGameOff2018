@@ -11,8 +11,11 @@ config_version=3
 [application]
 
 config/name="test_platformer"
-run/main_scene="res://Tutorial/Tutorial.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://TitleScreen/TitleScreen.tscn"
+
+[autoload]
+
+global="*res://global.gd"
 
 [display]
 
@@ -27,4 +30,5 @@ ui_switch=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name"
 
 [rendering]
 
+environment/default_clear_color=Color( 0.0976563, 0.0976563, 0.0976563, 1 )
 environment/default_environment="res://default_env.tres"

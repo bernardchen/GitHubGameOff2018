@@ -55,6 +55,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 4
+_sections_unfolded = [ "Visibility" ]
 
 [node name="CenterRow" type="HBoxContainer" parent="Menu" index="1"]
 
@@ -98,9 +99,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 48.0
+margin_top = 88.0
 margin_right = 900.0
-margin_bottom = 108.0
+margin_bottom = 148.0
 rect_min_size = Vector2( 360, 60 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -140,14 +141,13 @@ _sections_unfolded = [ "custom_constants", "custom_fonts" ]
 
 [node name="Options" type="Button" parent="Menu/CenterRow/Buttons" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 128.0
+margin_top = 168.0
 margin_right = 900.0
-margin_bottom = 188.0
+margin_bottom = 228.0
 rect_min_size = Vector2( 360, 60 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -162,8 +162,6 @@ shortcut = null
 group = null
 flat = true
 align = 1
-script = ExtResource( 3 )
-scene_to_load = null
 
 [node name="Label" type="Label" parent="Menu/CenterRow/Buttons/Options" index="0"]
 
@@ -178,54 +176,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 4 )
-text = "Options"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_constants", "custom_fonts" ]
-
-[node name="Credits" type="Button" parent="Menu/CenterRow/Buttons" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 208.0
-margin_right = 900.0
-margin_bottom = 268.0
-rect_min_size = Vector2( 360, 60 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = true
-align = 1
-script = ExtResource( 3 )
-scene_to_load = null
-
-[node name="Label" type="Label" parent="Menu/CenterRow/Buttons/Credits" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 4 )
-text = "Credits"
+text = "Options & Credits"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -235,6 +186,8 @@ _sections_unfolded = [ "custom_constants", "custom_fonts" ]
 [node name="FadeIn" parent="." index="1" instance=ExtResource( 5 )]
 
 visible = false
+
+[connection signal="pressed" from="Menu/CenterRow/Buttons/Options" to="." method="_on_Options_pressed"]
 
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
 

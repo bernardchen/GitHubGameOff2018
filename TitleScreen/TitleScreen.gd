@@ -3,9 +3,11 @@ extends Control
 var scene_path_to_load
 
 func _ready():
+	global.stop_urban()
+	if global.play_bgm and not global.snowheart_melody.playing:
+		global.play_snowheart()
 	$Menu/CenterRow/Buttons/NewGame.grab_focus()
-	for button in $Menu/CenterRow/Buttons.get_children():
-		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])
+	$Menu/CenterRow/Buttons/NewGame.connect("pressed", self, "_on_Button_pressed", [$Menu/CenterRow/Buttons/NewGame.scene_to_load])
 
 func _on_Button_pressed(scene_to_load):
 	$FadeIn.show()
@@ -14,4 +16,7 @@ func _on_Button_pressed(scene_to_load):
 
 func _on_FadeIn_fade_finished():
 	$FadeIn.hide()
-	get_tree().change_scene(scene_path_to_load)
+	global.goto_scene(scene_path_to_load)
+
+func _on_Options_pressed():
+	global.goto_scene("res://TitleScreen/Options.tscn")

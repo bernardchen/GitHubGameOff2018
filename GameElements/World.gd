@@ -28,6 +28,9 @@ func to_world2():
 	player.set_collision_layer_bit(1, true)
 
 func _ready():
+	global.stop_snowheart()
+	if global.play_bgm:
+		global.play_urban()
 	to_world1()
 
 func switch():
