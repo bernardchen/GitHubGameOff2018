@@ -346,7 +346,7 @@ position = Vector2( 320, 0 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 64, 0, 32, 32 )
+region_rect = Rect2( 64, 32, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -436,7 +436,7 @@ position = Vector2( 192, 0 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 32, 32 )
+region_rect = Rect2( 0, 32, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -466,7 +466,7 @@ position = Vector2( 192, 64 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 32, 32, 32 )
+region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -526,7 +526,7 @@ position = Vector2( 320, 64 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 64, 32, 32, 32 )
+region_rect = Rect2( 64, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
