@@ -17,6 +17,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if not already_triggered:
+		if global.play_sfx:
+			$sound.play()
 		start.set_global_position(self.get_global_position())
 		player.curr_checkpoint = self
 		already_triggered = true

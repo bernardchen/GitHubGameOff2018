@@ -28,6 +28,9 @@ func to_world2():
 	player.set_collision_layer_bit(1, true)
 
 func _ready():
+	global.stop_snowheart()
+	if global.play_bgm:
+		global.play_urban()
 	to_world1()
 
 func switch():
@@ -60,7 +63,11 @@ func can_switch():
 			return true
 	return false
 
-func _physics_process(delta):
+func _process(delta):
+	if Input.is_action_just_pressed("ui_pause"):
+		get_tree().paused = true
+		$switch_warning/paused.just_paused = true
+		$switch_warning/paused.show()
 	if Input.is_action_just_pressed("ui_switch"):
 		if can_switch():
 			switch()
