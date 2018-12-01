@@ -12,8 +12,8 @@ config_version=3
 
 config/name="Switchero"
 run/main_scene="res://TitleScreen/TitleScreen.tscn"
-boot_splash/image="res://TitleScreen/Splash.png"
-config/icon="res://Tiles/dash2.png"
+boot_splash/image="res://TitleScreen/load_in_screen.png"
+config/icon="res://TitleScreen/icon.png"
 
 [autoload]
 
