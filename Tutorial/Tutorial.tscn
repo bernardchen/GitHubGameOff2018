@@ -372,8 +372,8 @@ text = "The air will push you farther if you dash at the same time!"
 
 [node name="sign2" parent="world2" index="7" instance=ExtResource( 22 )]
 
-position = Vector2( 4650.95, 165.967 )
-text = "Good luck out there. Remember, you can pause with esc to return to the menu"
+position = Vector2( 4650.95, 165.702 )
+text = "Good luck out there."
 
 [node name="Tween" type="Tween" parent="." index="4"]
 
