@@ -26,7 +26,6 @@ animations = [ {
 
 [node name="checkpoint" type="Area2D" index="0"]
 
-z_index = 1
 z_as_relative = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
