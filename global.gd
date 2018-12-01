@@ -52,7 +52,7 @@ func goto_scene(path): # game requests to switch to this scene
 	current_scene.queue_free() # get rid of the old scene
 
 	# start your "loading..." animation
-	if path != "res://TitleScreen/TitleScreen.tscn" and path != "res://TitleScreen/Options.tscn":
+	if path != "res://TitleScreen/TitleScreen.tscn" and path != "res://TitleScreen/Options.tscn" and path != "res://EndScene/EndCard.tscn":
 		get_node("animation").show()
 		get_node("animation").play()
 
