@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GameElements/checkpoint.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/orange vending on.png" type="Texture" id=2]
 [ext_resource path="res://Tiles/orange vending off.png" type="Texture" id=3]
+[ext_resource path="res://Music/vending-machine.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -50,5 +51,14 @@ _sections_unfolded = [ "Visibility" ]
 
 frames = SubResource( 2 )
 animation = "off"
+
+[node name="sound" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 
