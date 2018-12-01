@@ -16,4 +16,5 @@ func _physics_process(delta):
 #	# Update game logic here
 	if overlaps_body(player):
 		player.bounce = true
+		player.already_dashed = false
 	pass

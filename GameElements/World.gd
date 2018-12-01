@@ -29,7 +29,7 @@ func to_world2():
 
 func _ready():
 	global.stop_snowheart()
-	if global.play_bgm:
+	if global.play_bgm and not global.urban_spelunking.playing:
 		global.play_urban()
 	to_world1()
 

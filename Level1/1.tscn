@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://GameElements/World.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/ocementtiles.tres" type="TileSet" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://GameElements/gem.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Fonts/m5x7_32.tres" type="DynamicFont" id=18]
 [ext_resource path="res://GameElements/pausemenu.tscn" type="PackedScene" id=19]
+[ext_resource path="res://GameElements/FadeOut.tscn" type="PackedScene" id=20]
 
 [node name="World" type="Node" index="0"]
 
@@ -1043,7 +1044,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="DangerBlock23" parent="world2" index="41" instance=ExtResource( 14 )]
 
-editor/display_folded = true
 position = Vector2( 2464, -1295 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
@@ -1085,7 +1085,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="start" type="Position2D" parent="." index="2"]
 
-position = Vector2( 328.02, -1438.33 )
+position = Vector2( 363.162, -1456.15 )
 
 [node name="player" parent="." index="3" instance=ExtResource( 16 )]
 
@@ -1120,7 +1120,7 @@ _sections_unfolded = [ "Editor", "Limit" ]
 [node name="gem" parent="." index="4" instance=ExtResource( 17 )]
 
 position = Vector2( 2606.78, -1364.04 )
-next_scene = "res://TitleScreen/TitleScreen.tscn"
+next_scene = "res://Level2/2.tscn"
 
 [node name="Tween" type="Tween" parent="." index="5"]
 
@@ -1167,5 +1167,9 @@ _sections_unfolded = [ "Anchor", "Visibility", "custom_fonts", "custom_styles" ]
 [node name="paused" parent="switch_warning" index="1" instance=ExtResource( 19 )]
 
 visible = false
+
+[node name="fade_out" parent="switch_warning" index="2" instance=ExtResource( 20 )]
+
+[connection signal="fade_finished" from="switch_warning/fade_out" to="gem" method="_on_fade_out_fade_finished"]
 
 

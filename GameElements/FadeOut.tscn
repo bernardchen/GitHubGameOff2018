@@ -5,7 +5,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "fade_in"
-length = 0.5
+length = 2.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -15,7 +15,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 2.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0.392157 ) ]

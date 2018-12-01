@@ -6,8 +6,8 @@ func _ready():
 	global.stop_urban()
 	if global.play_bgm and not global.snowheart_melody.playing:
 		global.play_snowheart()
-	$Menu/CenterRow/Buttons/NewGame.grab_focus()
-	$Menu/CenterRow/Buttons/NewGame.connect("pressed", self, "_on_Button_pressed", [$Menu/CenterRow/Buttons/NewGame.scene_to_load])
+	$Buttons/NewGame.grab_focus()
+	$Buttons/NewGame.connect("pressed", self, "_on_Button_pressed", [$Buttons/NewGame.scene_to_load])
 
 func _on_Button_pressed(scene_to_load):
 	$FadeIn.show()
