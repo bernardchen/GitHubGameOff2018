@@ -29,6 +29,9 @@ func _ready():
 
 #RESPAWN
 func _on_VisibilityNotifier2D_screen_exited():
+	respawn()
+
+func respawn():
 	if curr_checkpoint == start_checkpoint:
 		get_parent().to_world1()
 	else:
@@ -40,6 +43,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 	velocity = Vector2(0, 0)
 	dash = false
 	wall_jump = false
+	bounce = false
 	already_dashed = false
 	wall_jump_lim_cnt = WALL_JUMP_LIM + 1
 	pass

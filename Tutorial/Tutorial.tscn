@@ -36,7 +36,7 @@ script = ExtResource( 1 )
 
 [node name="start" type="Position2D" parent="." index="0"]
 
-position = Vector2( 100.22, 205.027 )
+position = Vector2( 107.837, 205.242 )
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -271,7 +271,6 @@ position = Vector2( 3232, 176 )
 
 [node name="world2" type="TileMap" parent="." index="3"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 13 )
 cell_size = Vector2( 32, 32 )
@@ -372,7 +371,7 @@ text = "The air will push you farther if you dash at the same time!"
 [node name="sign2" parent="world2" index="7" instance=ExtResource( 22 )]
 
 position = Vector2( 4650.95, 165.967 )
-text = "Best of luck. Remember, you can pause and unpause with p"
+text = "Good luck out there. Remember, you can pause with esc to return to the menu"
 
 [node name="Tween" type="Tween" parent="." index="4"]
 
