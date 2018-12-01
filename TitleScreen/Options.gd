@@ -14,7 +14,10 @@ func _on_BGM_button_up():
 		global.play_bgm = true
 
 func _on_SFX_button_up():
-	pass
+	if global.play_sfx:
+		global.play_sfx = false
+	else:
+		global.play_sfx = true
 
 func _on_menu_pressed(scene_to_load):
 	global.goto_scene("res://TitleScreen/TitleScreen.tscn")
