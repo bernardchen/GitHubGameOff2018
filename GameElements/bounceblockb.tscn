@@ -1,23 +1,23 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameElements/bounceblock.gd" type="Script" id=1]
-[ext_resource path="res://Tiles/bventanim1.png" type="Texture" id=2]
-[ext_resource path="res://Tiles/bventanim2.png" type="Texture" id=3]
-[ext_resource path="res://Tiles/bventanim3.png" type="Texture" id=4]
-[ext_resource path="res://Tiles/bventidle.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/bventidle.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/bventanim1.png" type="Texture" id=3]
+[ext_resource path="res://Tiles/bventanim2.png" type="Texture" id=4]
+[ext_resource path="res://Tiles/bventanim3.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "on",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "off",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "on",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -56,13 +56,13 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 4.76837e-007, 41 )
 scale = Vector2( 0.625, 0.625 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Pickable", "Transform", "Visibility" ]
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
